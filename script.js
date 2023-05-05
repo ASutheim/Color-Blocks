@@ -8,6 +8,7 @@ function onReady() {
   $("#blue-btn").on("click", addBlueBlock);
   $("#yellow-btn").on("click", addYellowBlock);
   $("#green-btn").on("click", addGreenBlock);
+  $(".all-blocks").on("click", ".block", removeBlock);
 }
 
 //The functions below add blocks of the designated color to the DOM to the page
@@ -26,4 +27,10 @@ function addYellowBlock() {
 
 function addGreenBlock() {
   $(".all-blocks").append('<div class="block green-fill"></div>');
+}
+
+//The functions below makes color squares disappear when clicked.
+
+function removeBlock() {
+  $(this).remove();
 }
